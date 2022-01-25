@@ -1,4 +1,3 @@
-@import "~normalize.css";
 
 .container {
   width: 85%;
@@ -51,7 +50,7 @@
   padding-top: 12px;
   text-align: right;
   height: 6rem;
-  color:rgb(41, 36, 36);
+  color:rgb(223, 20, 20);
   font-family: Verdana, Geneva, Tahoma, sans-serif,Courier,monospace;
   font-size: 3.5rem;
   width: 22%;
