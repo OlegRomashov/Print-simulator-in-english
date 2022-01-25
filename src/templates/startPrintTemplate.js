@@ -9,7 +9,7 @@ export default `
   </div>
   <div>
     <div id="rus" class="text"></div>
-    <div class="escape"><p>для выхода нажмите Escape</p></div>
+    <div class="escape"><p>для выхода нажмите '/'</p></div>
   </div>
   <div class="block">
     <div id="runner"></div>

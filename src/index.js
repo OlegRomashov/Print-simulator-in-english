@@ -46,7 +46,7 @@ function savePrint(event) {
 }
 
 function printEngl(event) {
-    event.preventDefault(event)
+    event.preventDefault()
     if(isValid($en, $ru)) {
         rus = $ru.value.trim()
         eng = $en.value.trim()
@@ -72,7 +72,7 @@ function printEngl(event) {
     const $rusSentence = getEl($startPrint, '#rus')
     const $runner = getEl($startPrint, '#runner')
     const $input = getEl($startPrint, '#input')
-          $input.addEventListener('keyup', inputHandler)
+          $input.addEventListener('input', inputHandler)
           $input.focus()
     
     const emptyArr = ['', '', '', '', '', '', '']
@@ -86,20 +86,20 @@ function printEngl(event) {
     let character = ''
 
     function inputHandler(event) {
-      if(event.code === 'Escape') {
+        if(event.target.value === '/') {
         $printed.textContent = ''
         $character.textContent = ''
         $fieldlSentence.textContent = ''
         $englSentence.textContent = ''
         $rusSentence.textContent = ''
-        $input.removeEventListener('keyup', inputHandler)
+        $input.removeEventListener('input', inputHandler)
         $startPrint.remove()
         $form.style.display = 'block'
         $en.value = eng = englArr.splice(engSentenceNumber, englArr.length - engSentenceNumber).join(' ')
         $ru.value = rus = rusArr.splice(ruSentenceNumber, rusArr.length - ruSentenceNumber).join(' ')
         $button2.disabled = !isValid($en, $ru)
       }
-      if (event.code === 'Space' && start === true) {
+      if (event.target.value === ' ' && start === true) {
       start = false
       character = field.splice(0, 1).join('')
       $character.textContent = character

@@ -32,7 +32,7 @@
 #input {
   display: block;
   margin: 20px;
-  height: .1rem;
+  height: 1rem;
   border: 0;
   outline: 0;
   color: #ffffff;
@@ -145,7 +145,7 @@ legend {
   display: block;
   position: absolute;
   height: 1rem;
-  width: 1%;
+  width: .1%;
   background: -moz-linear-gradient(left, #ebf1f6 0%, #89c3eb 15%, #89c3eb 15%, #abd3ee 42%, #d5ebfb 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #ebf1f6 0%,#89c3eb 15%,#89c3eb 15%,#abd3ee 42%,#d5ebfb 100%); 
   background: linear-gradient(to right, #ebf1f6 0%,#89c3eb 15%,#89c3eb 15%,#abd3ee 42%,#d5ebfb 100%); 
