@@ -73,6 +73,7 @@ function printEngl(event) {
     const $runner = getEl($startPrint, '#runner')
     const $input = getEl($startPrint, '#input')
           $input.addEventListener('input', inputHandler)
+          $input.addEventListener('keyup', escHandler)
           $input.focus()
     
     const emptyArr = ['', '', '', '', '', '', '']
@@ -85,20 +86,23 @@ function printEngl(event) {
     let position = 0
     let character = ''
 
-    function inputHandler(event) {
-        if(event.target.value === '/') {
+    function escHandler(event) {
+      if(event.key === 'Escape') {
         $printed.textContent = ''
         $character.textContent = ''
         $fieldlSentence.textContent = ''
         $englSentence.textContent = ''
         $rusSentence.textContent = ''
-        $input.removeEventListener('input', inputHandler)
+        $input.removeEventListener('keyup', escHandler)
         $startPrint.remove()
         $form.style.display = 'block'
         $en.value = eng = englArr.splice(engSentenceNumber, englArr.length - engSentenceNumber).join(' ')
         $ru.value = rus = rusArr.splice(ruSentenceNumber, rusArr.length - ruSentenceNumber).join(' ')
         $button2.disabled = !isValid($en, $ru)
       }
+    }
+
+    function inputHandler(event) {
       if (event.target.value === ' ' && start === true) {
       start = false
       character = field.splice(0, 1).join('')
