@@ -1,5 +1,5 @@
 function replace(str) {
-  const findFor = [/,+/,/\.+/, /!+/, /\?+/, / Mr. /, / Ms. /, /“|”/, /’/, / +/]
+  const findFor = [/,+/,/\.+/, /!+/, /\?+/, / Mr. /, / Ms. /, /“|”/, /’/, /\s+/]
   const replaceWith = [',', '. ', '! ', '? ', ' Mr ',' Ms ', '"', `'`, ' ']
   findFor.forEach( (i, j) => str = str.replace(new RegExp(i, "g"), replaceWith[j]) )
   return str
