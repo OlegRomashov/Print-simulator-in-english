@@ -40,8 +40,8 @@ if(data) {
 function savePrint(event) {
   event.preventDefault()
   localStorage.setItem(storageName, JSON.stringify({
-    rus: $ru.value.trim(),
-    eng: $en.value.trim()
+    rus: $ru.value,
+    eng: $en.value
   }))
 }
 
